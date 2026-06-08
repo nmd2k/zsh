@@ -43,8 +43,8 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 # Smart directory navigation & lf
 # =========================================================
 
-LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
-export LF_ICONS
+# LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
+# export LF_ICONS
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
@@ -66,15 +66,9 @@ zstyle ':completion:*' menu select
 # Example: "doc" can complete to "Documents"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase input matches upper and lower
 
-# =========================================================
-# Fuzzy finder
-# =========================================================
-
-# macOS / Homebrew (Apple Silicon)
-if [[ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ]]; then
-  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-  source /opt/homebrew/opt/fzf/shell/completion.zsh
-fi
+# Oh my Zsh theme
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="af-magic"
 
 # macOS / Homebrew (Intel)
 if [[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ]]; then

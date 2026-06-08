@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+plugins/*
+=======
 # Zsh compiled files
 *.zwc
 .zcompdump*
@@ -16,3 +19,4 @@ TUTORIAL.md
 
 # installed plugins
 ./plugins/
+>>>>>>> origin/main
