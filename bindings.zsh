@@ -37,4 +37,8 @@ zvm_after_init() {
 
     # Normal Mode
     bindkey -M vicmd '^F' _fzf_file_no_hidden
+
+    # Exit Insert Mode
+    # bindkey -M viins 'jk' vicmd
+    bindkey -M viins 'jk' vi-cmd-mode
 }
