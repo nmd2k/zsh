@@ -12,6 +12,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+<<<<<<< HEAD
 # ---------- GPG ----------
 export GPG_TTY=$(tty)
 
@@ -19,9 +20,24 @@ export GPG_TTY=$(tty)
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
 
+=======
+>>>>>>> origin/main
 # ---------- Pager ----------
 if command -v bat >/dev/null 2>&1; then
   export MANPAGER="bat -l man -p"
 elif command -v batcat >/dev/null 2>&1; then
   export MANPAGER="batcat -l man -p"
 fi
+<<<<<<< HEAD
+=======
+
+# ---------- GPG ----------
+export GPG_TTY=$(tty)
+
+# ---------- Starship ----------
+export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
+
+# ---------- PATH ----------
+# Personal binaries/scripts
+export PATH="$HOME/.local/bin:$PATH"
+>>>>>>> origin/main

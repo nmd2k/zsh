@@ -1,1 +1,22 @@
+<<<<<<< HEAD
 plugins/*
+=======
+# Zsh compiled files
+*.zwc
+.zcompdump*
+
+# Auto-installed by plugin manager
+plugins/
+
+# Machine-local overrides
+local.zsh
+
+# macOS metadata
+.DS_Store
+
+# Tutorial outline
+TUTORIAL.md
+
+# installed plugins
+./plugins/
+>>>>>>> origin/main
