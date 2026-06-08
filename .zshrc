@@ -37,13 +37,8 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 # Smart directory navigation & lf
 # =========================================================
 
-<<<<<<< HEAD
 # LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
 # export LF_ICONS
-=======
-LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
-export LF_ICONS
->>>>>>> origin/main
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
@@ -65,22 +60,10 @@ zstyle ':completion:*' menu select
 # Example: "doc" can complete to "Documents"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase input matches upper and lower
 
-<<<<<<< HEAD
+# Oh my Zsh theme
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="af-magic"
 
-=======
->>>>>>> origin/main
-# =========================================================
-# Fuzzy finder
-# =========================================================
-
-# macOS / Homebrew (Apple Silicon)
-if [[ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ]]; then
-  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-  source /opt/homebrew/opt/fzf/shell/completion.zsh
-fi
-
-<<<<<<< HEAD
-=======
 # macOS / Homebrew (Intel)
 if [[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ]]; then
   source /usr/local/opt/fzf/shell/key-bindings.zsh
@@ -98,7 +81,6 @@ if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
   source /usr/share/doc/fzf/examples/key-bindings.zsh
   source /usr/share/doc/fzf/examples/completion.zsh
 fi
->>>>>>> origin/main
 
 # =========================================================
 # Modular Config Files
@@ -118,8 +100,6 @@ source "$ZDOTDIR/plugins.zsh"
 
 # Prompt/theme
 source "$ZDOTDIR/prompt.zsh"
-<<<<<<< HEAD
-=======
 
 
 # =========================================================
@@ -129,4 +109,3 @@ source "$ZDOTDIR/prompt.zsh"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
->>>>>>> origin/main
