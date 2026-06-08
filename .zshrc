@@ -26,6 +26,12 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 
 # =========================================================
+# ZSH Theme 
+# =========================================================
+ZSH_THEME="af-magic"
+
+
+# =========================================================
 # Shell behaviour
 # =========================================================
 
@@ -107,11 +113,19 @@ source "$ZDOTDIR/plugins.zsh"
 # Prompt/theme
 source "$ZDOTDIR/prompt.zsh"
 
+# fzf
+source <(fzf --zsh)
 
 # =========================================================
-# Node / NVM
+# Custom
 # =========================================================
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
+
+# JAVA JDK
+export JAVA_HOME=/usr/lib/jvm/jdk-25.0.3+9
+export PATH=$JAVA_HOME/bin:$PATH
+

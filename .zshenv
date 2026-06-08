@@ -1,4 +1,7 @@
 # ~/.config/zsh/.zshenv
+# ---------- OMZ ----------
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="af-magic"
 
 # ---------- XDG base directories ----------
 # Centralizes config/cache/data locations
@@ -28,3 +31,7 @@ export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
 # ---------- PATH ----------
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/nmd2k/.opencode/bin:$PATH
+
