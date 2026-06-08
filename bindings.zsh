@@ -15,17 +15,11 @@ ZVM_VI_HIGHLIGHT_EXTRASTYLE=none
 # zsh-vi-mode resets all bindings on init, so custom bindings
 # must be registered via this hook to survive.
 zvm_after_init() {
-    # Ctrl+R -> history widget
-    bindkey -M viins '^R' fzf-history-widget
-
     # Ctrl+Right -> move forward one word (^[[1;5C is the terminal escape code)
     # bindkey '^[[1;5C' forward-word
 
     # Ctrl+Left -> move backward one word (^[[1;5D is the terminal escape code)
     # bindkey '^[[1;5D' backward-word
-
-    # Ctrl+F -> fzf file picker (no hidden files)
-    bindkey '^F' _fzf_file_no_hidden
 
     # Ctrl+\ -> toggle autosuggestions (useful for screen recordings)
     # bindkey '^\' autosuggest-toggle
@@ -33,4 +27,14 @@ zvm_after_init() {
     # Up/Down -> history search by substring (^[[A/^[[B are up/down arrow escape codes)
     # bindkey '^[[A' history-substring-search-up
     # bindkey '^[[B' history-substring-search-down
+
+    # Ctrl+R -> history widget
+    bindkey -M viins '^R' fzf-history-widget
+
+    # Ctrl+F -> fzf file picker
+    # Insert Mode
+    bindkey -M viins '^F' _fzf_file_no_hidden
+
+    # Normal Mode
+    bindkey -M vicmd '^F' _fzf_file_no_hidden
 }

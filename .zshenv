@@ -32,3 +32,5 @@ fi
 # opencode
 export PATH=/home/nmd2k/.opencode/bin:$PATH
 
+# color
+export TERM="xterm-256color"
