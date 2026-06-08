@@ -29,19 +29,6 @@ elif command -v batcat >/dev/null 2>&1; then
   export MANPAGER="batcat -l man -p"
 fi
 
-<<<<<<< HEAD
-# ---------- GPG ----------
-export GPG_TTY=$(tty)
-
-# ---------- Starship ----------
-export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
-
-# ---------- PATH ----------
-# Personal binaries/scripts
-export PATH="$HOME/.local/bin:$PATH"
-
 # opencode
 export PATH=/home/nmd2k/.opencode/bin:$PATH
 
-=======
->>>>>>> origin/main
