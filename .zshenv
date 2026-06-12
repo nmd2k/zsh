@@ -18,10 +18,6 @@ export VISUAL="nvim"
 # ---------- GPG ----------
 export GPG_TTY=$(tty)
 
-# ---------- PATH ----------
-# Personal binaries/scripts
-export PATH="$HOME/.local/bin:$PATH"
-
 # ---------- Pager ----------
 if command -v bat >/dev/null 2>&1; then
   export MANPAGER="bat -l man -p"
@@ -29,9 +25,13 @@ elif command -v batcat >/dev/null 2>&1; then
   export MANPAGER="batcat -l man -p"
 fi
 
+# color
+export TERM="xterm-256color"
+
+# ---------- PATH ----------
+# Personal binaries/scripts
+export PATH="$HOME/.local/bin:$PATH"
 # opencode
 export PATH=/home/nmd2k/.opencode/bin:$PATH
 
-# color
-export TERM="xterm-256color"
 

@@ -7,3 +7,6 @@ FUNCNEST=100
 
 # eval "$(starship init zsh)"
 source $ZSH/oh-my-zsh.sh
+
+# neofetch
+fastfetch
