@@ -28,7 +28,7 @@ _fzf_file_no_hidden() {
   cmd="${FZF_DEFAULT_COMMAND}"
   # result=$(eval "${cmd:--find . --type d}" | fzf --preview "$eza_preview") \
     # && LBUFFER+="$result"  # LBUFFER is the text left of the cursor
-  result=$(fd --type d --max-depth 1 --strip-cwd-prefix | fzf ${_FZF_DEFAULT_OPTS} --preview "$eza_preview")
+  result=$(fd --type f --type d --max-depth 1 --strip-cwd-prefix | fzf ${_FZF_DEFAULT_OPTS} --preview "$eza_preview")
   
   if [ -n "$result" ]; then
     LBUFFER+="$result/"
