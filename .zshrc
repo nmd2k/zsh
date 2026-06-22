@@ -102,9 +102,6 @@ fi
 # fzf configuration
 source "$ZDOTDIR/fzf.zsh"
 
-# Aliases
-source "$ZDOTDIR/aliases.zsh"
-
 # Custom keybindings
 source "$ZDOTDIR/bindings.zsh"
 
@@ -119,6 +116,10 @@ source <(fzf --zsh)
 
 # Rustc/Cargo
 source "$HOME/.cargo/env"
+
+# Aliases
+source "$ZDOTDIR/aliases.zsh"
+
 
 # =========================================================
 # Custom
