@@ -28,11 +28,6 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 
-# =========================================================
-# ZSH Theme 
-# =========================================================
-ZSH_THEME="af-magic"
-
 
 # =========================================================
 # Shell behaviour
@@ -57,7 +52,7 @@ eval "$(zoxide init zsh)"
 # =========================================================
 
 # Load completion system
-autoload -Uz compinit
+autoload -Uz compinit && compinit -u
 
 # Initialize completion with cached metadata file
 compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
@@ -72,10 +67,6 @@ zstyle ':completion:*' menu select
 # Make completion case-insensitive
 # Example: "doc" can complete to "Documents"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase input matches upper and lower
-
-# Oh my Zsh theme
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="af-magic"
 
 # macOS / Homebrew (Intel)
 if [[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ]]; then
@@ -114,9 +105,6 @@ source "$ZDOTDIR/prompt.zsh"
 # fzf
 source <(fzf --zsh)
 
-# Rustc/Cargo
-source "$HOME/.cargo/env"
-
 # Aliases
 source "$ZDOTDIR/aliases.zsh"
 
@@ -124,46 +112,6 @@ source "$ZDOTDIR/aliases.zsh"
 # =========================================================
 # Custom
 # =========================================================
-
-# Create a lazy load function for NVM
-lazy_load_nvm() {
-    # Unset the placeholder functions so they don't loop
-    unset -f nvm node npm npx yarn
-    
-    # Define where NVM lives if not already set
-    export NVM_DIR="$HOME/.nvm"
-    
-    # Load NVM and its completions natively now
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-}
-
-# Create placeholder functions that intercept the first call
-nvm()  { lazy_load_nvm; nvm "$@"; }
-node() { lazy_load_nvm; node "$@"; }
-npm()  { lazy_load_nvm; npm "$@"; }
-npx()  { lazy_load_nvm; npx "$@"; }
-yarn() { lazy_load_nvm; yarn "$@"; }
-
-# JAVA JDK
-export JAVA_HOME=/usr/lib/jvm/jdk-25.0.3+9
-export PATH=$JAVA_HOME/bin:$PATH
-
-
-# ========================= Conda ==========================
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/manhdungnguy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/manhdungnguy/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/manhdungnguy/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/manhdungnguy/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
 
 # Debug zsh startup time
 # zprof

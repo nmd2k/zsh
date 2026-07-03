@@ -1,8 +1,4 @@
 # ~/.config/zsh/.zshenv
-# ---------- OMZ ----------
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="af-magic"
-
 # ---------- XDG base directories ----------
 # Centralizes config/cache/data locations
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -28,10 +24,13 @@ fi
 # color
 export TERM="xterm-256color"
 
-# ---------- PATH ----------
-# Personal binaries/scripts
-export PATH="$HOME/.local/bin:$PATH"
-# opencode
-export PATH=/home/nmd2k/.opencode/bin:$PATH
-
-
+# ========================= Personal PATH ==========================
+# # Local bin
+# export PATH="$HOME/.local/bin:$PATH"
+#
+# # JAVA JDK
+# export JAVA_HOME=/usr/lib/jvm/jdk-25.0.3+9
+# export PATH=$JAVA_HOME/bin:$PATH
+#
+# # opencode
+# export PATH="$HOME/.opencode/bin:$PATH"
